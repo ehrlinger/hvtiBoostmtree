@@ -1,5 +1,5 @@
-Package: boostmtree
-Version: 2.0.0.9000
+Package: hvtiBoostmtree
+Version: 2.0.0
 Date: 2026-03-24
 Title: Boosted Multivariate Trees for Longitudinal Data
 Authors@R:
@@ -31,8 +31,8 @@ Description: Implements Friedman's gradient descent boosting algorithm for
     data as well. Implementation details are provided in Pande et al. (2017),
     Mach Learn <doi:10.1007/s10994-016-5597-1>.
 License: GPL (>= 3)
-URL: https://ehrlinger.github.io/boostmtree/, https://github.com/ehrlinger/boostmtree
-BugReports: https://github.com/ehrlinger/boostmtree/issues
+URL: https://ehrlinger.github.io/hvtiBoostmtree/, https://github.com/ehrlinger/hvtiBoostmtree
+BugReports: https://github.com/ehrlinger/hvtiBoostmtree/issues
 NeedsCompilation: no
 Suggests:
     testthat (>= 3.0.0),

@@ -1,7 +1,8 @@
-# boostmtree 2.0.0.9000
+# hvtiBoostmtree 2.0.0
 
 ## Breaking Changes
 
+* Package renamed from `boostmtree` to `hvtiBoostmtree` (internal-only fork; the original `boostmtree` name remains with the upstream CRAN package). The `boostmtree()` function and S3 methods are unchanged — usage is now `library(hvtiBoostmtree); boostmtree(...)`.
 * Minimum R version bumped to 4.1.0.
 * Maintainership transferred to John Ehrlinger. Original authors (Ishwaran, Pande, Kogalur) remain as authors.
 

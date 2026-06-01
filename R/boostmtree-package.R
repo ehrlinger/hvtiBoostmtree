@@ -25,7 +25,7 @@
 #' 372(15):1399--1408, 2015.
 #' @keywords datasets
 #' @examples
-#' data(AF, package = "boostmtree")
+#' data(AF, package = "hvtiBoostmtree")
 NULL
 
 
@@ -41,7 +41,7 @@ NULL
 #' (P-splines) with estimated adaptive smoothing parameter.
 #' 
 #' 
-#' @name boostmtree-package
+#' @name hvtiBoostmtree-package
 #' @section Package Overview: This package contains many useful functions and
 #' users should read the help file in its entirety for details.  However, we
 #' briefly mention several key functions that may make it easier to navigate
@@ -102,7 +102,7 @@ NULL
 #' Cardiovasc. Surg.}, 144:197-203, 2012.
 #' @keywords datasets
 #' @examples
-#' data(spirometry, package = "boostmtree")
+#' data(spirometry, package = "hvtiBoostmtree")
 NULL
 
 

@@ -1,4 +1,4 @@
-url: https://ehrlinger.github.io/boostmtree/
+url: https://ehrlinger.github.io/hvtiBoostmtree/
 
 template:
   bootstrap: 5
@@ -11,7 +11,7 @@ template:
   theme-dark: atom-one-dark
 
 home:
-  title: "boostmtree — Boosted Multivariate Trees for Longitudinal Data"
+  title: "hvtiBoostmtree — Boosted Multivariate Trees for Longitudinal Data"
   description: >
     Gradient descent boosting for longitudinal response data using multivariate
     tree base learners and penalized B-splines for covariate-time interactions.
@@ -22,12 +22,11 @@ home:
       badges:
         title: Package Status
         text: |
-          [![CRAN](https://www.r-pkg.org/badges/version/boostmtree)](https://cran.r-project.org/package=boostmtree)<br>
-          [![R-CMD-check](https://github.com/ehrlinger/boostmtree/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ehrlinger/boostmtree/actions/workflows/R-CMD-check.yaml)<br>
-          [![codecov](https://codecov.io/gh/ehrlinger/boostmtree/graph/badge.svg)](https://app.codecov.io/gh/ehrlinger/boostmtree)<br>
+          [![R-CMD-check](https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/R-CMD-check.yaml)<br>
+          [![codecov](https://codecov.io/gh/ehrlinger/hvtiBoostmtree/graph/badge.svg)](https://app.codecov.io/gh/ehrlinger/hvtiBoostmtree)<br>
           [![License: GPL (&gt;= 3)](https://img.shields.io/badge/License-GPL%20(%3E%3D%203)-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)<br>
           [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)<br>
-          ![GitHub version](https://img.shields.io/github/r-package/v/ehrlinger/boostmtree)
+          ![GitHub version](https://img.shields.io/github/r-package/v/ehrlinger/hvtiBoostmtree)
 
 navbar:
   structure:
@@ -40,7 +39,7 @@ navbar:
     articles:
       text: Articles
       menu:
-        - text: Introduction to boostmtree
+        - text: Introduction to hvtiBoostmtree
           href: articles/introduction.html
         - text: Longitudinal Data Analysis
           href: articles/longitudinal-analysis.html
@@ -103,10 +102,10 @@ reference:
   - title: "Package"
     desc: Package-level documentation and utilities.
     contents:
-      - boostmtree-package
+      - hvtiBoostmtree-package
       - boostmtree.news
 
 news:
   releases:
     - text: "Version 2.0.0"
-      href: https://github.com/ehrlinger/boostmtree/releases/tag/v2.0.0
+      href: https://github.com/ehrlinger/hvtiBoostmtree/releases/tag/v2.0.0

@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(boostmtree)
+library(hvtiBoostmtree)
 
-test_check("boostmtree")
+test_check("hvtiBoostmtree")

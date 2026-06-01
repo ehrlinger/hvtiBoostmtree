@@ -1,5 +1,5 @@
 ---
-title: "Introduction to boostmtree"
+title: "Introduction to hvtiBoostmtree"
 format: html
 execute:
   freeze: auto
@@ -13,7 +13,7 @@ knitr:
     collapse: true
     comment: "#>"
 vignette: >
-  %\VignetteIndexEntry{Introduction to boostmtree}
+  %\VignetteIndexEntry{Introduction to hvtiBoostmtree}
   %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
@@ -38,11 +38,8 @@ to a standard boosting model when each subject has only a single observation.
 ## Installation
 
 ```r
-# Released version
-install.packages("boostmtree")
-
-# Development version
-remotes::install_github("ehrlinger/boostmtree")
+# Internal-only; install from GitHub
+remotes::install_github("ehrlinger/hvtiBoostmtree")
 ```
 
 ## Simulating longitudinal data
@@ -59,7 +56,7 @@ covariate–time interaction complexity.  Four simulation models are provided:
 
 ```{r}
 #| label: simulate
-library(boostmtree)
+library(hvtiBoostmtree)
 
 set.seed(42)
 dta <- simLong(

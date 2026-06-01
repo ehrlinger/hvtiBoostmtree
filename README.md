@@ -1,22 +1,22 @@
-# boostmtree — Boosted Multivariate Trees for Longitudinal Data
+# hvtiBoostmtree — Boosted Multivariate Trees for Longitudinal Data
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ehrlinger/boostmtree/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ehrlinger/boostmtree/actions/workflows/R-CMD-check.yaml)
-[![test coverage](https://codecov.io/gh/ehrlinger/boostmtree/graph/badge.svg)](https://app.codecov.io/gh/ehrlinger/boostmtree)
-[![pkgdown](https://github.com/ehrlinger/boostmtree/actions/workflows/pkgdown.yaml/badge.svg)](https://ehrlinger.github.io/boostmtree/)
+[![R-CMD-check](https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/R-CMD-check.yaml)
+[![test coverage](https://codecov.io/gh/ehrlinger/hvtiBoostmtree/graph/badge.svg)](https://app.codecov.io/gh/ehrlinger/hvtiBoostmtree)
+[![pkgdown](https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/pkgdown.yaml/badge.svg)](https://ehrlinger.github.io/hvtiBoostmtree/)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![License: GPL (>= 3)](https://img.shields.io/badge/License-GPL%20(%3E%3D%203)-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Repo status: active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 <!-- badges: end -->
 
-> **Fork notice:** This repository is a fork of
-> [kogalur/boostmtree](https://github.com/kogalur/boostmtree) branched
-> at **v1.5.1**. This fork's v2.0.0 is independent of, and diverges
-> from, the [kogalur v2.0.0](https://cran.r-project.org/package=boostmtree)
-> released on CRAN in May 2026. `install.packages("boostmtree")` installs
-> the upstream kogalur package, **not** this fork.
+> **Fork notice:** `hvtiBoostmtree` is an internal-only fork of
+> [kogalur/boostmtree](https://github.com/kogalur/boostmtree), branched
+> at **v1.5.1** and diverging independently since. It was renamed from
+> `boostmtree` to `hvtiBoostmtree` so it no longer collides with the
+> upstream `boostmtree` package on CRAN. The fitting function is still
+> `boostmtree()` — only the package name changed.
 
-**boostmtree** implements Friedman's (2001) gradient descent boosting algorithm for modeling longitudinal responses using multivariate tree base learners. Covariate-time interactions are captured via penalized B-splines (P-splines) with an adaptively estimated smoothing parameter. The package handles continuous, binary, nominal, and ordinal responses, and works equally well for cross-sectional data.
+**hvtiBoostmtree** implements Friedman's (2001) gradient descent boosting algorithm for modeling longitudinal responses using multivariate tree base learners. Covariate-time interactions are captured via penalized B-splines (P-splines) with an adaptively estimated smoothing parameter. The package handles continuous, binary, nominal, and ordinal responses, and works equally well for cross-sectional data.
 
 ## Features
 
@@ -36,16 +36,8 @@ This fork is available from GitHub only:
 
 ```r
 # install.packages("remotes")
-remotes::install_github("ehrlinger/boostmtree")
+remotes::install_github("ehrlinger/hvtiBoostmtree")
 ```
-
-> **⚠️ Name collision:** Both this fork and the upstream
-> [kogalur/boostmtree](https://cran.r-project.org/package=boostmtree)
-> use the package name `boostmtree`. R's library can only hold one version
-> under that name — installing one overwrites the other. If you need both
-> in the same environment, use a project-level library such as
-> [`renv`](https://rstudio.github.io/renv/) or point `.libPaths()` to a
-> separate directory.
 
 ### Optional enhanced visualization
 
@@ -62,7 +54,7 @@ remotes::install_github("ehrlinger/hvtiRutilities")
 ### Simulated continuous longitudinal data
 
 ```r
-library(boostmtree)
+library(hvtiBoostmtree)
 
 ## Simulate training and test data (model 1: linear time × covariate interaction)
 set.seed(42)
@@ -122,7 +114,7 @@ partialPlot(fit, xvar.names = "x1")
 ### Binary response — Atrial Fibrillation data
 
 ```r
-data(AF, package = "boostmtree")
+data(AF, package = "hvtiBoostmtree")
 
 fit_af <- boostmtree(
   x      = AF$feature,
@@ -145,7 +137,7 @@ vimpPlot(vimp_af)
 ### Continuous response — Spirometry data
 
 ```r
-data(spirometry, package = "boostmtree")
+data(spirometry, package = "hvtiBoostmtree")
 
 fit_spi <- boostmtree(
   x      = spirometry$features,
@@ -184,11 +176,11 @@ marginalPlot(fit_spi, xvar.names = colnames(spirometry$features)[1:4])
 
 ## Documentation
 
-Full documentation is available at **<https://ehrlinger.github.io/boostmtree/>**, including:
+Full documentation is available at **<https://ehrlinger.github.io/hvtiBoostmtree/>**, including:
 
-- [Reference manual](https://ehrlinger.github.io/boostmtree/reference/)
-- [Introduction vignette](https://ehrlinger.github.io/boostmtree/articles/introduction.html)
-- [Longitudinal analysis vignette](https://ehrlinger.github.io/boostmtree/articles/longitudinal-analysis.html)
+- [Reference manual](https://ehrlinger.github.io/hvtiBoostmtree/reference/)
+- [Introduction vignette](https://ehrlinger.github.io/hvtiBoostmtree/articles/introduction.html)
+- [Longitudinal analysis vignette](https://ehrlinger.github.io/hvtiBoostmtree/articles/longitudinal-analysis.html)
 
 ## Authors
 
@@ -199,7 +191,7 @@ Full documentation is available at **<https://ehrlinger.github.io/boostmtree/>**
 
 ## Citation
 
-If you use **boostmtree** in your research, please cite:
+If you use **hvtiBoostmtree** in your research, please cite:
 
 > Pande A., Li L., Rajeswaran J., Ehrlinger J., Kogalur U.B., Blackstone E.H., Ishwaran H. (2017).
 > Boosted multivariate trees for longitudinal data.
@@ -207,7 +199,7 @@ If you use **boostmtree** in your research, please cite:
 > doi: [10.1007/s10994-016-5597-1](https://doi.org/10.1007/s10994-016-5597-1)
 
 ```r
-citation("boostmtree")
+citation("hvtiBoostmtree")
 ```
 
 ## References
