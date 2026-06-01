@@ -27,6 +27,11 @@ home:
           [![License: GPL (&gt;= 3)](https://img.shields.io/badge/License-GPL%20(%3E%3D%203)-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)<br>
           [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)<br>
           ![GitHub version](https://img.shields.io/github/r-package/v/ehrlinger/hvtiBoostmtree)
+      links:
+        title: Links
+        text: |
+          [Browse source code](https://github.com/ehrlinger/hvtiBoostmtree)<br>
+          [Report a bug](https://github.com/ehrlinger/hvtiBoostmtree/issues)
 
 navbar:
   structure:
