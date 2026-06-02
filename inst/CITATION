@@ -1,4 +1,4 @@
-citHeader("To cite boostmtree in publications use:")
+citHeader("To cite hvtiBoostmtree in publications use:")
 
 # Package citation
 vers <- paste("R package version", meta$Version)
@@ -15,7 +15,7 @@ bibentry(
   ),
   year         = year,
   note         = vers,
-  url          = "https://github.com/ehrlinger/boostmtree",
+  url          = "https://github.com/ehrlinger/hvtiBoostmtree",
   textVersion  = paste0(
     "Ishwaran H., Pande A., Kogalur U.B., and Ehrlinger J. (",
     year, "). ", meta$Title, ", ", vers, "."

@@ -19,7 +19,7 @@ after LTx, and to identify factors associated with post-LTx FEV1 and
 assessing the differences in the trends after Single LTx versus Double LTx.
 }
 \examples{
-data(spirometry, package = "boostmtree")
+data(spirometry, package = "hvtiBoostmtree")
 }
 \references{
 Mason D.P., Rajeswaran J., Li L., Murthy S.C., Su J.W.,

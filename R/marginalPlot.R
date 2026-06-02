@@ -156,7 +156,7 @@
 #' ##----------------------------------------------------------------------------
 #' ## spirometry data
 #' ##----------------------------------------------------------------------------
-#' data(spirometry, package = "boostmtree")
+#' data(spirometry, package = "hvtiBoostmtree")
 #'
 #' #boosting call: cubic B-splines with 15 knots
 #' spr.obj <- boostmtree(spirometry$features, spirometry$time, spirometry$id, spirometry$y,

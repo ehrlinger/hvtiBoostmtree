@@ -4,17 +4,18 @@
 ##
 ##   Rscript inst/extdata/precompute.R
 ##
-## The generated .rds files should be committed to version control so that
-## vignette compilation during R CMD check loads them rather than recomputing.
+## The generated .rds files are gitignored (too large for GitHub, >100 MB).
+## They are loaded locally for fast vignette/pkgdown builds when present;
+## vignette compilation recomputes the fits when they are absent (e.g. on CI).
 
-library(boostmtree)
+library(hvtiBoostmtree)
 
 out_dir <- file.path("inst", "extdata")
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
 ## ── Spirometry (continuous) ─────────────────────────────────────────────────
 
-data(spirometry, package = "boostmtree")
+data(spirometry, package = "hvtiBoostmtree")
 
 set.seed(2024)
 subjects  <- unique(spirometry$id)
@@ -40,7 +41,7 @@ message("  → saved fit_spi.rds")
 
 ## ── Atrial Fibrillation (binary) ────────────────────────────────────────────
 
-data(AF, package = "boostmtree")
+data(AF, package = "hvtiBoostmtree")
 
 set.seed(2024)
 subjects_af <- unique(AF$id)
@@ -62,4 +63,4 @@ fit_af <- boostmtree(
 saveRDS(fit_af, file.path(out_dir, "fit_af.rds"))
 message("  → saved fit_af.rds")
 
-message("Done.  Commit inst/extdata/fit_spi.rds and inst/extdata/fit_af.rds.")
+message("Done.  fit_spi.rds and fit_af.rds written to inst/extdata/ (gitignored, local use only).")

@@ -74,7 +74,7 @@
 
 #' Show the NEWS file
 #' 
-#' Show the NEWS file of the \pkg{boostmtree} package.
+#' Show the NEWS file of the \pkg{hvtiBoostmtree} package.
 #' 
 #' 
 #' @param ... Further arguments passed to or from other methods.
@@ -83,6 +83,6 @@
 #' @keywords documentation
 #' @export
 boostmtree.news <- function(...) {
-  newsfile <- file.path(system.file(package = "boostmtree"), "NEWS")
+  newsfile <- file.path(system.file(package = "hvtiBoostmtree"), "NEWS")
   file.show(newsfile)
 }

@@ -5,7 +5,7 @@
 # Shared tiny continuous longitudinal fit
 make_cont_fit <- function(seed = 2024) {
   set.seed(seed)
-  sim <- boostmtree::simLong(n = 8, ntest = 0, N = 2, rho = 0.25,
+  sim <- hvtiBoostmtree::simLong(n = 8, ntest = 0, N = 2, rho = 0.25,
                              model = 1, family = "Continuous", q = 0)
   fit <- boostmtree(
     x       = sim$dtaL$features,
@@ -26,7 +26,7 @@ make_cont_fit <- function(seed = 2024) {
 
 make_binary_fit_plots <- function(seed = 2024) {
   set.seed(seed)
-  sim <- boostmtree::simLong(n = 6, ntest = 0, N = 2, rho = 0.25,
+  sim <- hvtiBoostmtree::simLong(n = 6, ntest = 0, N = 2, rho = 0.25,
                              model = 0, family = "Binary", q = 0)
   fit <- boostmtree(
     x = sim$dtaL$features, tm = sim$dtaL$time,

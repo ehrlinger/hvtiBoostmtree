@@ -5,7 +5,7 @@
 # Shared small dataset (binary, longitudinal) used across multiple tests.
 make_binary_fit <- function(seed = 123) {
   set.seed(seed)
-  sim <- boostmtree::simLong(
+  sim <- hvtiBoostmtree::simLong(
     n = 8, ntest = 0, N = 2, rho = 0.2,
     model = 1, family = "Binary", q = 1
   )
@@ -52,7 +52,7 @@ test_that("boostmtree fit contains required slots", {
 
 test_that("boostmtree Continuous fit returns finite predictions", {
   set.seed(7)
-  sim <- boostmtree::simLong(n = 10, ntest = 0, N = 3, model = 0,
+  sim <- hvtiBoostmtree::simLong(n = 10, ntest = 0, N = 3, model = 0,
                              family = "Continuous", q = 0)
   fit <- boostmtree(
     x = sim$dtaL$features, tm = sim$dtaL$time,
@@ -71,7 +71,7 @@ test_that("boostmtree Continuous fit returns finite predictions", {
 # ---------------------------------------------------------------------------
 
 test_that("boostmtree stops on invalid family", {
-  sim <- boostmtree::simLong(n = 6, ntest = 0, N = 2,
+  sim <- hvtiBoostmtree::simLong(n = 6, ntest = 0, N = 2,
                              model = 0, family = "Continuous", q = 0)
   expect_error(
     boostmtree(sim$dtaL$features, sim$dtaL$time, sim$dtaL$id,
@@ -81,7 +81,7 @@ test_that("boostmtree stops on invalid family", {
 })
 
 test_that("boostmtree stops when multiple families are supplied", {
-  sim <- boostmtree::simLong(n = 6, ntest = 0, N = 2,
+  sim <- hvtiBoostmtree::simLong(n = 6, ntest = 0, N = 2,
                              model = 0, family = "Continuous", q = 0)
   expect_error(
     boostmtree(sim$dtaL$features, sim$dtaL$time, sim$dtaL$id,
@@ -107,7 +107,7 @@ test_that("predict.boostmtree returns correct class on training data", {
 
 test_that("predict.boostmtree computes RMSE when y is supplied", {
   set.seed(42)
-  sim <- boostmtree::simLong(n = 10, ntest = 5, N = 3, model = 0,
+  sim <- hvtiBoostmtree::simLong(n = 10, ntest = 5, N = 3, model = 0,
                              family = "Continuous", q = 0)
   fit <- boostmtree(
     x = sim$dtaL$features[sim$trn, ], tm = sim$dtaL$time[sim$trn],
@@ -294,7 +294,7 @@ test_that("print.boostmtree works for Ordinal grow object", {
 
 make_valid_args <- function(seed = 99) {
   set.seed(seed)
-  sim <- boostmtree::simLong(
+  sim <- hvtiBoostmtree::simLong(
     n = 6, ntest = 0, N = 2, rho = 0.2,
     model = 0, family = "Continuous", q = 1
   )

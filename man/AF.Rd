@@ -23,7 +23,7 @@ patients. From 228 patients, 7949 AF measurements are available with average
 of 35 measurements per patient.
 }
 \examples{
-data(AF, package = "boostmtree")
+data(AF, package = "hvtiBoostmtree")
 }
 \references{
 Gillinov A. M., Gelijns A.C., Parides M.K., DeRose J.J.Jr.,

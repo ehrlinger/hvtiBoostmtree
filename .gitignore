@@ -8,3 +8,12 @@ docs/
 
 vignettes/*_cache/
 
+# Claude Code workspace
+.claude/
+
+# Test run artifacts
+tests/testthat/Rplots.pdf
+
+# Precomputed vignette fits — too large for GitHub (>100 MB);
+# vignettes recompute when absent. Regenerate with inst/extdata/precompute.R.
+inst/extdata/*.rds

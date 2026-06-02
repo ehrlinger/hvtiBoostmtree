@@ -6,6 +6,7 @@
 ^pkgdown$
 ^\.git$
 ^\.gitignore$
+^\.claude$
 ^\.Rhistory$
 ^\.RData$
 ^\.Ruserdata$

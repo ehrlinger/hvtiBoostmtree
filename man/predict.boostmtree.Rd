@@ -143,8 +143,8 @@ p.3 <- predict(o.3, dtaL$features[-trn, ], dtaL$time[-trn], dtaL$id[-trn], dtaL$
 
 ##rmse values compared to generalized least squares (GLS)
 ##for true model and well specified linear models (LM)
-cat("true LM           :", boostmtree:::gls.rmse(f.true,dta,trn),"\n")
-cat("well specified LM :", boostmtree:::gls.rmse(f.linr,dta,trn),"\n")
+cat("true LM           :", hvtiBoostmtree:::gls.rmse(f.true,dta,trn),"\n")
+cat("well specified LM :", hvtiBoostmtree:::gls.rmse(f.linr,dta,trn),"\n")
 cat("boostmtree        :", p.1$rmse,"\n")
 cat("boostmtree  (nmtg):", p.2$rmse,"\n")
 cat("boostmtree (rho=0):", p.3$rmse,"\n")

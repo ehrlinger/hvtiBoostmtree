@@ -318,7 +318,7 @@
 #' ##----------------------------------------------------------------------------
 #' ## spirometry data (Response is continuous)
 #' ##----------------------------------------------------------------------------
-#' data(spirometry, package = "boostmtree")
+#' data(spirometry, package = "hvtiBoostmtree")
 #'
 #' #boosting call: cubic B-splines with 15 knots
 #' spr.obj <- boostmtree(spirometry$features, spirometry$time, spirometry$id, spirometry$y,
@@ -329,7 +329,7 @@
 #' ##----------------------------------------------------------------------------
 #' ## Atrial Fibrillation data (Response is binary)
 #' ##----------------------------------------------------------------------------
-#' data(AF, package = "boostmtree")
+#' data(AF, package = "hvtiBoostmtree")
 #'
 #' #boosting call: cubic B-splines with 15 knots
 #' AF.obj <- boostmtree(AF$feature, AF$time, AF$id, AF$y,

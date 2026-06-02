@@ -13,7 +13,7 @@ boostmtree.news(...)
 None.
 }
 \description{
-Show the NEWS file of the \pkg{boostmtree} package.
+Show the NEWS file of the \pkg{hvtiBoostmtree} package.
 }
 \author{
 Hemant Ishwaran, Amol Pande and Udaya B. Kogalur

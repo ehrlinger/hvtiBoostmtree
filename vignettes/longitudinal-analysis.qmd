@@ -1,5 +1,5 @@
 ---
-title: "Longitudinal Data Analysis with boostmtree"
+title: "Longitudinal Data Analysis with hvtiBoostmtree"
 format: html
 execute:
   freeze: auto
@@ -13,7 +13,7 @@ knitr:
     collapse: true
     comment: "#>"
 vignette: >
-  %\VignetteIndexEntry{Longitudinal Data Analysis with boostmtree}
+  %\VignetteIndexEntry{Longitudinal Data Analysis with hvtiBoostmtree}
   %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
@@ -39,9 +39,9 @@ measurements from 509 patients along with 23 baseline clinical covariates.
 
 ```{r}
 #| label: spirometry-load
-library(boostmtree)
+library(hvtiBoostmtree)
 
-data(spirometry, package = "boostmtree")
+data(spirometry, package = "hvtiBoostmtree")
 
 cat("Patients:         ", length(unique(spirometry$id)), "\n")
 cat("Total obs:        ", length(spirometry$y), "\n")
@@ -103,7 +103,7 @@ fit_spi <- boostmtree(
 #| label: spirometry-fit-load
 #| include: false
 ## Check installed package first, then source tree (local pkgdown builds)
-fit_spi_path <- system.file("extdata", "fit_spi.rds", package = "boostmtree")
+fit_spi_path <- system.file("extdata", "fit_spi.rds", package = "hvtiBoostmtree")
 if (!nzchar(fit_spi_path)) {
   src <- file.path("inst", "extdata", "fit_spi.rds")
   if (file.exists(src)) fit_spi_path <- src
@@ -190,7 +190,7 @@ enrolled in a surgical ablation trial, with up to 12 months follow-up.
 
 ```{r}
 #| label: af-load
-data(AF, package = "boostmtree")
+data(AF, package = "hvtiBoostmtree")
 
 cat("Patients:    ", length(unique(AF$id)), "\n")
 cat("Total obs:   ", length(AF$y), "\n")
@@ -240,7 +240,7 @@ fit_af <- boostmtree(
 #| label: af-fit-load
 #| include: false
 ## Check installed package first, then source tree (local pkgdown builds)
-fit_af_path <- system.file("extdata", "fit_af.rds", package = "boostmtree")
+fit_af_path <- system.file("extdata", "fit_af.rds", package = "hvtiBoostmtree")
 if (!nzchar(fit_af_path)) {
   src <- file.path("inst", "extdata", "fit_af.rds")
   if (file.exists(src)) fit_af_path <- src
