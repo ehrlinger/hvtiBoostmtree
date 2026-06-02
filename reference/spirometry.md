@@ -31,5 +31,5 @@ survival after lung transplantation. *J. Thorac. Cardiovasc. Surg.*,
 ## Examples
 
 ``` r
-data(spirometry, package = "boostmtree")
+data(spirometry, package = "hvtiBoostmtree")
 ```

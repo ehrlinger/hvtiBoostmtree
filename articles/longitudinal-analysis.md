@@ -1,4 +1,4 @@
-# Longitudinal Data Analysis with boostmtree
+# Longitudinal Data Analysis with hvtiBoostmtree
 
 ## Motivation
 
@@ -22,9 +22,9 @@ covariates.
 
 ``` r
 
-library(boostmtree)
+library(hvtiBoostmtree)
 
-data(spirometry, package = "boostmtree")
+data(spirometry, package = "hvtiBoostmtree")
 
 cat("Patients:         ", length(unique(spirometry$id)), "\n")
 #> Patients:          509
@@ -40,7 +40,7 @@ cat("Time range (yrs): ", round(range(spirometry$time), 2), "\n")
 
 ### Data structure
 
-[`boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/boostmtree.md)
+[`boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/boostmtree.md)
 expects data in *long format* (one row per observation), split into four
 components:
 
@@ -183,7 +183,7 @@ follow-up.
 
 ``` r
 
-data(AF, package = "boostmtree")
+data(AF, package = "hvtiBoostmtree")
 
 cat("Patients:    ", length(unique(AF$id)), "\n")
 #> Patients:     228
@@ -307,7 +307,7 @@ marginalPlot(fit_af, xvar.names = colnames(AF$feature)[1:4], plot.it = TRUE)
 
 ## Simulation study: comparing models
 
-[`simLong()`](https://ehrlinger.github.io/boostmtree/reference/simLong.md)
+[`simLong()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/simLong.md)
 supports systematic benchmarking across simulation models. Below we
 compare OOB RMSE across the four simulation scenarios for a continuous
 response.

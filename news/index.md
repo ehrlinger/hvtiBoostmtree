@@ -1,9 +1,15 @@
 # Changelog
 
-## boostmtree 2.0.0.9000
+## hvtiBoostmtree 2.0.0
 
 ### Breaking Changes
 
+- Package renamed from `boostmtree` to `hvtiBoostmtree` (internal-only
+  fork; the original `boostmtree` name remains with the upstream CRAN
+  package). The
+  [`boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/boostmtree.md)
+  function and S3 methods are unchanged — usage is now
+  [`library(hvtiBoostmtree); boostmtree(...)`](https://ehrlinger.github.io/hvtiBoostmtree/).
 - Minimum R version bumped to 4.1.0.
 - Maintainership transferred to John Ehrlinger. Original authors
   (Ishwaran, Pande, Kogalur) remain as authors.
@@ -27,68 +33,3 @@
   changelog rendering.
 
 ------------------------------------------------------------------------
-
-## boostmtree 1.5.2
-
-- Minor maintenance release: updated CI/CD workflows and pkgdown
-  configuration.
-
-## boostmtree 1.5.1
-
-CRAN release: 2022-03-10
-
-- Added the ability to model a nominal or ordinal longitudinal response.
-  Package now handles continuous, binary, nominal, and ordinal
-  longitudinal responses.
-
-## boostmtree 1.4.1
-
-CRAN release: 2019-11-21
-
-- Added the ability to model a binary response.
-- Added
-  [`vimp.boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/vimp.boostmtree.md)
-  for variable importance estimation using out-of-bag or test data,
-  including joint VIMP for multiple covariates.
-
-## boostmtree 1.3.0
-
-CRAN release: 2018-08-13
-
-- Fixed `mclapply` on Windows and Debian — defaults to `lapply` on those
-  platforms.
-- In-sample cross-validation now uses only out-of-bag data.
-- Variable importance (VIMP) calculated from OOB data in grow mode.
-- Renamed `vimp.plot` to `vimpPlot`.
-- Added
-  [`marginalPlot()`](https://ehrlinger.github.io/boostmtree/reference/marginalPlot.md)
-  — faster alternative to
-  [`partialPlot()`](https://ehrlinger.github.io/boostmtree/reference/partialPlot.md)
-  providing unadjusted predicted values.
-
-## boostmtree 1.2.1
-
-CRAN release: 2018-02-12
-
-- Fix to avoid `mclapply` on Debian, defaulting to `lapply` instead.
-
-## boostmtree 1.2.0
-
-CRAN release: 2017-09-05
-
-- Synchronization with `randomForestSRC` (\>= 1.5.0) due to changes in
-  membership output protocols.
-
-## boostmtree 1.1.0
-
-CRAN release: 2016-04-12
-
-- Added in-sample cross-validation for determining the optimal boosting
-  iteration.
-- Various bug fixes.
-
-## boostmtree 1.0.0
-
-CRAN release: 2016-03-17
-
-- Initial CRAN release.

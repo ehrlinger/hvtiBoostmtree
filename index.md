@@ -1,19 +1,20 @@
-# boostmtree — Boosted Multivariate Trees for Longitudinal Data
+# hvtiBoostmtree — Boosted Multivariate Trees for Longitudinal Data
 
-> **Fork notice:** This repository is a fork of
-> [kogalur/boostmtree](https://github.com/kogalur/boostmtree) branched
-> at **v1.5.1**. This fork’s v2.0.0 is independent of, and diverges
-> from, the [kogalur
-> v2.0.0](https://cran.r-project.org/package=boostmtree) released on
-> CRAN in May 2026. `install.packages("boostmtree")` installs the
-> upstream kogalur package, **not** this fork.
+> **Fork notice:** `hvtiBoostmtree` is an internal-only fork of
+> [kogalur/boostmtree](https://github.com/kogalur/boostmtree), branched
+> at **v1.5.1** and diverging independently since. It was renamed from
+> `boostmtree` to `hvtiBoostmtree` so it no longer collides with the
+> upstream `boostmtree` package on CRAN. The fitting function is still
+> [`boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/boostmtree.md)
+> — only the package name changed.
 
-**boostmtree** implements Friedman’s (2001) gradient descent boosting
-algorithm for modeling longitudinal responses using multivariate tree
-base learners. Covariate-time interactions are captured via penalized
-B-splines (P-splines) with an adaptively estimated smoothing parameter.
-The package handles continuous, binary, nominal, and ordinal responses,
-and works equally well for cross-sectional data.
+**hvtiBoostmtree** implements Friedman’s (2001) gradient descent
+boosting algorithm for modeling longitudinal responses using
+multivariate tree base learners. Covariate-time interactions are
+captured via penalized B-splines (P-splines) with an adaptively
+estimated smoothing parameter. The package handles continuous, binary,
+nominal, and ordinal responses, and works equally well for
+cross-sectional data.
 
 ## Features
 
@@ -38,17 +39,8 @@ This fork is available from GitHub only:
 ``` r
 
 # install.packages("remotes")
-remotes::install_github("ehrlinger/boostmtree")
+remotes::install_github("ehrlinger/hvtiBoostmtree")
 ```
-
-> **⚠️ Name collision:** Both this fork and the upstream
-> [kogalur/boostmtree](https://cran.r-project.org/package=boostmtree)
-> use the package name `boostmtree`. R’s library can only hold one
-> version under that name — installing one overwrites the other. If you
-> need both in the same environment, use a project-level library such as
-> [`renv`](https://rstudio.github.io/renv/) or point
-> [`.libPaths()`](https://rdrr.io/r/base/libPaths.html) to a separate
-> directory.
 
 ### Optional enhanced visualization
 
@@ -68,7 +60,7 @@ remotes::install_github("ehrlinger/hvtiRutilities")
 
 ``` r
 
-library(boostmtree)
+library(hvtiBoostmtree)
 
 ## Simulate training and test data (model 1: linear time × covariate interaction)
 set.seed(42)
@@ -132,7 +124,7 @@ partialPlot(fit, xvar.names = "x1")
 
 ``` r
 
-data(AF, package = "boostmtree")
+data(AF, package = "hvtiBoostmtree")
 
 fit_af <- boostmtree(
   x      = AF$feature,
@@ -156,7 +148,7 @@ vimpPlot(vimp_af)
 
 ``` r
 
-data(spirometry, package = "boostmtree")
+data(spirometry, package = "hvtiBoostmtree")
 
 fit_spi <- boostmtree(
   x      = spirometry$features,
@@ -176,15 +168,15 @@ marginalPlot(fit_spi, xvar.names = colnames(spirometry$features)[1:4])
 
 | Function | Description |
 |----|----|
-| [`boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/boostmtree.md) | Fit a boosted multivariate tree model |
-| [`predict.boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/predict.boostmtree.md) | Predict on new data |
-| [`print.boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/print.boostmtree.md) | Print model summary |
-| [`plot.boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/plot.boostmtree.md) | Diagnostic plots (error curve, fitted values, residuals) |
-| [`vimp.boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/vimp.boostmtree.md) | Variable importance scores |
-| [`vimpPlot()`](https://ehrlinger.github.io/boostmtree/reference/vimpPlot.md) | Plot variable importance |
-| [`marginalPlot()`](https://ehrlinger.github.io/boostmtree/reference/marginalPlot.md) | Marginal dependence plots (fast) |
-| [`partialPlot()`](https://ehrlinger.github.io/boostmtree/reference/partialPlot.md) | Partial dependence plots (adjusted) |
-| [`simLong()`](https://ehrlinger.github.io/boostmtree/reference/simLong.md) | Simulate longitudinal data |
+| [`boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/boostmtree.md) | Fit a boosted multivariate tree model |
+| [`predict.boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/predict.boostmtree.md) | Predict on new data |
+| [`print.boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/print.boostmtree.md) | Print model summary |
+| [`plot.boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/plot.boostmtree.md) | Diagnostic plots (error curve, fitted values, residuals) |
+| [`vimp.boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/vimp.boostmtree.md) | Variable importance scores |
+| [`vimpPlot()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/vimpPlot.md) | Plot variable importance |
+| [`marginalPlot()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/marginalPlot.md) | Marginal dependence plots (fast) |
+| [`partialPlot()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/partialPlot.md) | Partial dependence plots (adjusted) |
+| [`simLong()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/simLong.md) | Simulate longitudinal data |
 
 ## Datasets
 
@@ -196,13 +188,14 @@ marginalPlot(fit_spi, xvar.names = colnames(spirometry$features)[1:4])
 ## Documentation
 
 Full documentation is available at
-**<https://ehrlinger.github.io/boostmtree/>**, including:
+**<https://ehrlinger.github.io/hvtiBoostmtree/>**, including:
 
-- [Reference manual](https://ehrlinger.github.io/boostmtree/reference/)
+- [Reference
+  manual](https://ehrlinger.github.io/hvtiBoostmtree/reference/)
 - [Introduction
-  vignette](https://ehrlinger.github.io/boostmtree/articles/introduction.html)
+  vignette](https://ehrlinger.github.io/hvtiBoostmtree/articles/introduction.html)
 - [Longitudinal analysis
-  vignette](https://ehrlinger.github.io/boostmtree/articles/longitudinal-analysis.html)
+  vignette](https://ehrlinger.github.io/hvtiBoostmtree/articles/longitudinal-analysis.html)
 
 ## Authors
 
@@ -213,7 +206,7 @@ Full documentation is available at
 
 ## Citation
 
-If you use **boostmtree** in your research, please cite:
+If you use **hvtiBoostmtree** in your research, please cite:
 
 > Pande A., Li L., Rajeswaran J., Ehrlinger J., Kogalur U.B., Blackstone
 > E.H., Ishwaran H. (2017). Boosted multivariate trees for longitudinal
@@ -222,7 +215,7 @@ If you use **boostmtree** in your research, please cite:
 
 ``` r
 
-citation("boostmtree")
+citation("hvtiBoostmtree")
 ```
 
 ## References
@@ -241,4 +234,5 @@ data. *Machine Learning*, 106(2): 277–305. doi:
 ## License
 
 GPL (\>= 3) — see
-[LICENSE](https://ehrlinger.github.io/boostmtree/LICENSE) for details.
+[LICENSE](https://ehrlinger.github.io/hvtiBoostmtree/LICENSE) for
+details.

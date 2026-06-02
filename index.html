@@ -5,14 +5,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>boostmtree — Boosted Multivariate Trees for Longitudinal Data • boostmtree</title>
+<title>hvtiBoostmtree — Boosted Multivariate Trees for Longitudinal Data • hvtiBoostmtree</title>
 <script src="lightswitch.js"></script><script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/Outfit-0.4.10/font.css" rel="stylesheet">
 <link href="deps/Fira_Code-0.4.10/font.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="boostmtree — Boosted Multivariate Trees for Longitudinal Data">
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="hvtiBoostmtree — Boosted Multivariate Trees for Longitudinal Data">
 <meta name="description" content="Gradient descent boosting for longitudinal response data using multivariate tree base learners and penalized B-splines for covariate-time interactions. Supports continuous, binary, nominal, and ordinal responses.
 ">
 <meta property="og:description" content="Gradient descent boosting for longitudinal response data using multivariate tree base learners and penalized B-splines for covariate-time interactions. Supports continuous, binary, nominal, and ordinal responses.
@@ -24,9 +24,9 @@
 
     <nav class="navbar navbar-expand-lg fixed-top " aria-label="Site navigation"><div class="container">
 
-    <a class="navbar-brand me-2" href="index.html">boostmtree</a>
+    <a class="navbar-brand me-2" href="index.html">hvtiBoostmtree</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/introduction.html">Introduction to boostmtree</a></li>
+<li><a class="dropdown-item" href="articles/introduction.html">Introduction to hvtiBoostmtree</a></li>
     <li><a class="dropdown-item" href="articles/longitudinal-analysis.html">Longitudinal Data Analysis</a></li>
   </ul>
 </li>
@@ -48,7 +48,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-news" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">News</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-news">
 <li><h6 class="dropdown-header" data-toc-skip>Releases</h6></li>
-    <li><a class="external-link dropdown-item" href="https://github.com/ehrlinger/boostmtree/releases/tag/v2.0.0">Version 2.0.0</a></li>
+    <li><a class="external-link dropdown-item" href="https://github.com/ehrlinger/hvtiBoostmtree/releases/tag/v2.0.0">Version 2.0.0</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="news/index.html">Changelog</a></li>
   </ul>
@@ -58,7 +58,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/ehrlinger/boostmtree/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/ehrlinger/hvtiBoostmtree/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://www.linkedin.com/in/ehrlinger/" aria-label="LinkedIn"><span class="fa fa-linkedin"></span></a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-lightswitch" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Light switch"><span class="fa fa-sun"></span></button>
@@ -76,14 +76,14 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="boostmtree--boosted-multivariate-trees-for-longitudinal-data">boostmtree — Boosted Multivariate Trees for Longitudinal Data<a class="anchor" aria-label="anchor" href="#boostmtree--boosted-multivariate-trees-for-longitudinal-data"></a>
+<div class="page-header"><h1 id="hvtiboostmtree--boosted-multivariate-trees-for-longitudinal-data">hvtiBoostmtree — Boosted Multivariate Trees for Longitudinal Data<a class="anchor" aria-label="anchor" href="#hvtiboostmtree--boosted-multivariate-trees-for-longitudinal-data"></a>
 </h1></div>
 <!-- badges: start -->
 
 <blockquote>
-<p><strong>Fork notice:</strong> This repository is a fork of <a href="https://github.com/kogalur/boostmtree" class="external-link">kogalur/boostmtree</a> branched at <strong>v1.5.1</strong>. This fork’s v2.0.0 is independent of, and diverges from, the <a href="https://cran.r-project.org/package=boostmtree" class="external-link">kogalur v2.0.0</a> released on CRAN in May 2026. <code>install.packages("boostmtree")</code> installs the upstream kogalur package, <strong>not</strong> this fork.</p>
+<p><strong>Fork notice:</strong> <code>hvtiBoostmtree</code> is an internal-only fork of <a href="https://github.com/kogalur/boostmtree" class="external-link">kogalur/boostmtree</a>, branched at <strong>v1.5.1</strong> and diverging independently since. It was renamed from <code>boostmtree</code> to <code>hvtiBoostmtree</code> so it no longer collides with the upstream <code>boostmtree</code> package on CRAN. The fitting function is still <code><a href="reference/boostmtree.html">boostmtree()</a></code> — only the package name changed.</p>
 </blockquote>
-<p><strong>boostmtree</strong> implements Friedman’s (2001) gradient descent boosting algorithm for modeling longitudinal responses using multivariate tree base learners. Covariate-time interactions are captured via penalized B-splines (P-splines) with an adaptively estimated smoothing parameter. The package handles continuous, binary, nominal, and ordinal responses, and works equally well for cross-sectional data.</p>
+<p><strong>hvtiBoostmtree</strong> implements Friedman’s (2001) gradient descent boosting algorithm for modeling longitudinal responses using multivariate tree base learners. Covariate-time interactions are captured via penalized B-splines (P-splines) with an adaptively estimated smoothing parameter. The package handles continuous, binary, nominal, and ordinal responses, and works equally well for cross-sectional data.</p>
 <div class="section level2">
 <h2 id="features">Features<a class="anchor" aria-label="anchor" href="#features"></a>
 </h2>
@@ -105,10 +105,7 @@
 <p>This fork is available from GitHub only:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ehrlinger/boostmtree"</span><span class="op">)</span></span></code></pre></div>
-<blockquote>
-<p><strong>⚠️ Name collision:</strong> Both this fork and the upstream <a href="https://cran.r-project.org/package=boostmtree" class="external-link">kogalur/boostmtree</a> use the package name <code>boostmtree</code>. R’s library can only hold one version under that name — installing one overwrites the other. If you need both in the same environment, use a project-level library such as <a href="https://rstudio.github.io/renv/" class="external-link"><code>renv</code></a> or point <code><a href="https://rdrr.io/r/base/libPaths.html" class="external-link">.libPaths()</a></code> to a separate directory.</p>
-</blockquote>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ehrlinger/hvtiBoostmtree"</span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="optional-enhanced-visualization">Optional enhanced visualization<a class="anchor" aria-label="anchor" href="#optional-enhanced-visualization"></a>
 </h3>
@@ -126,7 +123,7 @@
 <h3 id="simulated-continuous-longitudinal-data">Simulated continuous longitudinal data<a class="anchor" aria-label="anchor" href="#simulated-continuous-longitudinal-data"></a>
 </h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ehrlinger.github.io/boostmtree/">boostmtree</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ehrlinger.github.io/hvtiBoostmtree/">hvtiBoostmtree</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Simulate training and test data (model 1: linear time × covariate interaction)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
@@ -186,7 +183,7 @@
 <h3 id="binary-response--atrial-fibrillation-data">Binary response — Atrial Fibrillation data<a class="anchor" aria-label="anchor" href="#binary-response--atrial-fibrillation-data"></a>
 </h3>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">AF</span>, package <span class="op">=</span> <span class="st">"boostmtree"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">AF</span>, package <span class="op">=</span> <span class="st">"hvtiBoostmtree"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">fit_af</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/boostmtree.html">boostmtree</a></span><span class="op">(</span></span>
 <span>  x      <span class="op">=</span> <span class="va">AF</span><span class="op">$</span><span class="va">feature</span>,</span>
@@ -209,7 +206,7 @@
 <h3 id="continuous-response--spirometry-data">Continuous response — Spirometry data<a class="anchor" aria-label="anchor" href="#continuous-response--spirometry-data"></a>
 </h3>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">spirometry</span>, package <span class="op">=</span> <span class="st">"boostmtree"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">spirometry</span>, package <span class="op">=</span> <span class="st">"hvtiBoostmtree"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">fit_spi</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/boostmtree.html">boostmtree</a></span><span class="op">(</span></span>
 <span>  x      <span class="op">=</span> <span class="va">spirometry</span><span class="op">$</span><span class="va">features</span>,</span>
@@ -316,11 +313,11 @@
 <div class="section level2">
 <h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h2>
-<p>Full documentation is available at <strong><a href="https://ehrlinger.github.io/boostmtree/" class="uri">https://ehrlinger.github.io/boostmtree/</a></strong>, including:</p>
+<p>Full documentation is available at <strong><a href="https://ehrlinger.github.io/hvtiBoostmtree/" class="uri">https://ehrlinger.github.io/hvtiBoostmtree/</a></strong>, including:</p>
 <ul>
-<li><a href="https://ehrlinger.github.io/boostmtree/reference/">Reference manual</a></li>
-<li><a href="https://ehrlinger.github.io/boostmtree/articles/introduction.html">Introduction vignette</a></li>
-<li><a href="https://ehrlinger.github.io/boostmtree/articles/longitudinal-analysis.html">Longitudinal analysis vignette</a></li>
+<li><a href="https://ehrlinger.github.io/hvtiBoostmtree/reference/">Reference manual</a></li>
+<li><a href="https://ehrlinger.github.io/hvtiBoostmtree/articles/introduction.html">Introduction vignette</a></li>
+<li><a href="https://ehrlinger.github.io/hvtiBoostmtree/articles/longitudinal-analysis.html">Longitudinal analysis vignette</a></li>
 </ul>
 </div>
 <div class="section level2">
@@ -340,12 +337,12 @@
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
-<p>If you use <strong>boostmtree</strong> in your research, please cite:</p>
+<p>If you use <strong>hvtiBoostmtree</strong> in your research, please cite:</p>
 <blockquote>
 <p>Pande A., Li L., Rajeswaran J., Ehrlinger J., Kogalur U.B., Blackstone E.H., Ishwaran H. (2017). Boosted multivariate trees for longitudinal data. <em>Machine Learning</em>, 106(2): 277–305. doi: <a href="https://doi.org/10.1007/s10994-016-5597-1" class="external-link">10.1007/s10994-016-5597-1</a></p>
 </blockquote>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"boostmtree"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"hvtiBoostmtree"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
@@ -363,14 +360,14 @@
   </main><aside class="col-md-3"><div class="package-status">
 <h2 data-toc-skip>Package Status</h2>
 <ul class="list-unstyled">
-<li><p><a href="https://github.com/ehrlinger/boostmtree/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/ehrlinger/boostmtree/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a><br><a href="https://app.codecov.io/gh/ehrlinger/boostmtree" class="external-link"><img src="https://codecov.io/gh/ehrlinger/boostmtree/graph/badge.svg" alt="codecov"></a><br><a href="https://www.gnu.org/licenses/gpl-3.0" class="external-link"><img src="https://img.shields.io/badge/License-GPL%20(%3E%3D%203)-blue.svg" alt="License: GPL (&gt;= 3)"></a><br><a href="https://lifecycle.r-lib.org/articles/stages.html#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a><br><img src="https://img.shields.io/github/r-package/v/ehrlinger/boostmtree" alt="GitHub version"></p></li>
+<li><p><a href="https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a><br><a href="https://app.codecov.io/gh/ehrlinger/hvtiBoostmtree" class="external-link"><img src="https://codecov.io/gh/ehrlinger/hvtiBoostmtree/graph/badge.svg" alt="codecov"></a><br><a href="https://www.gnu.org/licenses/gpl-3.0" class="external-link"><img src="https://img.shields.io/badge/License-GPL%20(%3E%3D%203)-blue.svg" alt="License: GPL (&gt;= 3)"></a><br><a href="https://lifecycle.r-lib.org/articles/stages.html#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a><br><img src="https://img.shields.io/github/r-package/v/ehrlinger/hvtiBoostmtree" alt="GitHub version"></p></li>
 </ul>
 </div>
 
 <div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li><p><a href="https://github.com/ehrlinger/boostmtree" class="external-link">Browse source code</a><br><a href="https://github.com/ehrlinger/boostmtree/issues" class="external-link">Report a bug</a></p></li>
+<li><p><a href="https://github.com/ehrlinger/hvtiBoostmtree" class="external-link">Browse source code</a><br><a href="https://github.com/ehrlinger/hvtiBoostmtree/issues" class="external-link">Report a bug</a></p></li>
 </ul>
 </div>
 

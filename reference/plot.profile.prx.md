@@ -60,4 +60,4 @@ neighbours.
 
 ## See also
 
-[`predict.boostmtree`](https://ehrlinger.github.io/boostmtree/reference/predict.boostmtree.md)
+[`predict.boostmtree`](https://ehrlinger.github.io/hvtiBoostmtree/reference/predict.boostmtree.md)

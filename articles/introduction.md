@@ -1,4 +1,4 @@
-# Introduction to boostmtree
+# Introduction to hvtiBoostmtree
 
 ## Overview
 
@@ -23,16 +23,13 @@ single observation.
 
 ``` r
 
-# Released version
-install.packages("boostmtree")
-
-# Development version
-remotes::install_github("ehrlinger/boostmtree")
+# Internal-only; install from GitHub
+remotes::install_github("ehrlinger/hvtiBoostmtree")
 ```
 
 ## Simulating longitudinal data
 
-[`simLong()`](https://ehrlinger.github.io/boostmtree/reference/simLong.md)
+[`simLong()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/simLong.md)
 generates synthetic longitudinal datasets with varying degrees of
 covariate–time interaction complexity. Four simulation models are
 provided:
@@ -46,7 +43,7 @@ provided:
 
 ``` r
 
-library(boostmtree)
+library(hvtiBoostmtree)
 
 set.seed(42)
 dta <- simLong(
@@ -73,7 +70,7 @@ cat("Covariates:   ", ncol(dta$dtaL$features), "\n")
 ## Fitting a model
 
 The main entry point is
-[`boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/boostmtree.md).
+[`boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/boostmtree.md).
 Key tuning parameters are:
 
 | Parameter | Description                              | Default |
@@ -127,7 +124,7 @@ overfitting without a separate held-out validation set.
 
 ## Diagnostic plots
 
-[`plot.boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/plot.boostmtree.md)
+[`plot.boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/plot.boostmtree.md)
 produces a multi-panel diagnostic display:
 
 ``` r
@@ -181,7 +178,7 @@ plot(pred)
 
 ## Variable importance
 
-[`vimp.boostmtree()`](https://ehrlinger.github.io/boostmtree/reference/vimp.boostmtree.md)
+[`vimp.boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/vimp.boostmtree.md)
 computes permutation-based variable importance. For grow objects
 (training data) it uses OOB samples; for predict objects it uses the
 test set.
@@ -191,7 +188,7 @@ test set.
 vimp_obj <- vimp.boostmtree(fit)
 ```
 
-[`vimpPlot()`](https://ehrlinger.github.io/boostmtree/reference/vimpPlot.md)
+[`vimpPlot()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/vimpPlot.md)
 displays the results. For longitudinal models, positive bars (above the
 x-axis) represent main effects and negative bars (below) represent
 time-interaction effects.
@@ -205,7 +202,7 @@ vimpPlot(vimp_obj)
 
 ### Marginal plots (fast)
 
-[`marginalPlot()`](https://ehrlinger.github.io/boostmtree/reference/marginalPlot.md)
+[`marginalPlot()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/marginalPlot.md)
 bins the covariate into quantile groups and plots the *raw* (unadjusted)
 predicted mean at each group. It is fast and useful for initial
 exploration.
@@ -217,7 +214,7 @@ marginalPlot(fit, xvar.names = c("x1", "x2"), plot.it = TRUE)
 
 ### Partial dependence plots (adjusted)
 
-[`partialPlot()`](https://ehrlinger.github.io/boostmtree/reference/partialPlot.md)
+[`partialPlot()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/partialPlot.md)
 marginalises over all other covariates at each evaluation point,
 providing a confounder-adjusted relationship. It is slower but more
 interpretable in the presence of correlated predictors.

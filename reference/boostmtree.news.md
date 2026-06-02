@@ -1,6 +1,6 @@
 # Show the NEWS file
 
-Show the NEWS file of the boostmtree package.
+Show the NEWS file of the hvtiBoostmtree package.
 
 ## Usage
 

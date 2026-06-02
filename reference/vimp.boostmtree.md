@@ -59,9 +59,9 @@ machine, *Ann. of Statist.*, 5:1189-1232, 2001.
 
 ## See also
 
-[`vimpPlot`](https://ehrlinger.github.io/boostmtree/reference/vimpPlot.md),
-[`boostmtree`](https://ehrlinger.github.io/boostmtree/reference/boostmtree.md),
-[`predict.boostmtree`](https://ehrlinger.github.io/boostmtree/reference/predict.boostmtree.md)
+[`vimpPlot`](https://ehrlinger.github.io/hvtiBoostmtree/reference/vimpPlot.md),
+[`boostmtree`](https://ehrlinger.github.io/hvtiBoostmtree/reference/boostmtree.md),
+[`predict.boostmtree`](https://ehrlinger.github.io/hvtiBoostmtree/reference/predict.boostmtree.md)
 
 ## Author
 

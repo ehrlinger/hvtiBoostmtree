@@ -223,8 +223,8 @@ data, *Machine Learning*, 106(2): 277–305.
 
 ## See also
 
-[`plot.boostmtree`](https://ehrlinger.github.io/boostmtree/reference/plot.boostmtree.md),
-[`print.boostmtree`](https://ehrlinger.github.io/boostmtree/reference/print.boostmtree.md)
+[`plot.boostmtree`](https://ehrlinger.github.io/hvtiBoostmtree/reference/plot.boostmtree.md),
+[`print.boostmtree`](https://ehrlinger.github.io/hvtiBoostmtree/reference/print.boostmtree.md)
 
 ## Author
 
@@ -324,9 +324,9 @@ p.3 <- predict(o.3, dtaL$features[-trn, ], dtaL$time[-trn], dtaL$id[-trn], dtaL$
 
 ##rmse values compared to generalized least squares (GLS)
 ##for true model and well specified linear models (LM)
-cat("true LM           :", boostmtree:::gls.rmse(f.true,dta,trn),"\n")
+cat("true LM           :", hvtiBoostmtree:::gls.rmse(f.true,dta,trn),"\n")
 #> true LM           : NA 
-cat("well specified LM :", boostmtree:::gls.rmse(f.linr,dta,trn),"\n")
+cat("well specified LM :", hvtiBoostmtree:::gls.rmse(f.linr,dta,trn),"\n")
 #> well specified LM : NA 
 cat("boostmtree        :", p.1$rmse,"\n")
 #> boostmtree        : 0.5830027 
@@ -337,11 +337,11 @@ cat("boostmtree (rho=0):", p.3$rmse,"\n")
 
 ##predicted value plots
 plot(p.1)
-#> Plot saved to: /tmp/Rtmp6dBw9y/boostmtree_plot.pdf
+#> Plot saved to: /tmp/RtmpJ4kneC/boostmtree_plot.pdf
 plot(p.2)
-#> Plot saved to: /tmp/Rtmp6dBw9y/boostmtree_plot.pdf
+#> Plot saved to: /tmp/RtmpJ4kneC/boostmtree_plot.pdf
 plot(p.3)
-#> Plot saved to: /tmp/Rtmp6dBw9y/boostmtree_plot.pdf
+#> Plot saved to: /tmp/RtmpJ4kneC/boostmtree_plot.pdf
 
 
 

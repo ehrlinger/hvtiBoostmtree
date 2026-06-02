@@ -14,17 +14,17 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/ehrlinger/boostmtree/blob/main/inst/CITATION)
+[`inst/CITATION`](https://github.com/ehrlinger/hvtiBoostmtree/blob/main/inst/CITATION)
 
 Ishwaran H., Pande A., Kogalur U.B., and Ehrlinger J. (2026). Boosted
-Multivariate Trees for Longitudinal Data, R package version 2.0.0.9000.
+Multivariate Trees for Longitudinal Data, R package version 2.0.0.
 
     @Manual{,
       title = {Boosted Multivariate Trees for Longitudinal Data},
       author = {H. Ishwaran and A. Pande and U.B. Kogalur and J. Ehrlinger},
       year = {2026},
-      note = {R package version 2.0.0.9000},
-      url = {https://github.com/ehrlinger/boostmtree},
+      note = {R package version 2.0.0},
+      url = {https://github.com/ehrlinger/hvtiBoostmtree},
     }
 
 Pande A., Li L., Rajeswaran J., Ehrlinger J., Kogalur U.B., Blackstone

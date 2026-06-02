@@ -35,5 +35,5 @@ mitral valve surgery. *The New England Journal of Medicine*
 ## Examples
 
 ``` r
-data(AF, package = "boostmtree")
+data(AF, package = "hvtiBoostmtree")
 ```
