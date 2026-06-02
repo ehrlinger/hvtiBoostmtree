@@ -1,6 +1,6 @@
 Package: hvtiBoostmtree
 Version: 2.0.0
-Date: 2026-03-24
+Date: 2026-06-02
 Title: Boosted Multivariate Trees for Longitudinal Data
 Authors@R:
     c(person(given = "Hemant",
