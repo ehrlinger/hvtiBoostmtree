@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">hvtiBoostmtree</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,9 +48,19 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Changelog</h1>
-      <small>Source: <a href="https://github.com/ehrlinger/hvtiBoostmtree/blob/v2.0.0/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
+      <small>Source: <a href="https://github.com/ehrlinger/hvtiBoostmtree/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="2.0.1" id="hvtiboostmtree-201">hvtiBoostmtree 2.0.1<a class="anchor" aria-label="anchor" href="#hvtiboostmtree-201"></a></h2>
+<div class="section level3">
+<h3 id="bug-fixes-2-0-1">Bug Fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-2-0-1"></a></h3>
+<ul><li>
+<code><a href="../reference/vimpPlot.html">vimpPlot()</a></code> no longer over-supplies bar labels. The internal <code><a href="https://rdrr.io/r/graphics/text.html" class="external-link">graphics::text()</a></code> calls passed <code>rep(xvar.names, 3)</code> — three labels for every bar — which triggered a <code>'labels' truncated to length ...</code> warning and could mislabel bars. Labels now correspond one-to-one with the plotted bars.</li>
+<li>
+<code><a href="../reference/plot.boostmtree.html">plot.boostmtree()</a></code> now draws the optimal-iteration reference line for every class of a multiclass (Nominal/Ordinal) prediction object. The internal <code><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline()</a></code> calls indexed an already-scalar <code>Mopt</code> as <code>Mopt[q]</code>, yielding <code>NA</code> (and a silently missing line) for the second and later classes.</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="2.0.0" id="hvtiboostmtree-200">hvtiBoostmtree 2.0.0<a class="anchor" aria-label="anchor" href="#hvtiboostmtree-200"></a></h2>
 <div class="section level3">

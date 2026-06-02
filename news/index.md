@@ -1,5 +1,22 @@
 # Changelog
 
+## hvtiBoostmtree 2.0.1
+
+### Bug Fixes
+
+- [`vimpPlot()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/vimpPlot.md)
+  no longer over-supplies bar labels. The internal
+  [`graphics::text()`](https://rdrr.io/r/graphics/text.html) calls
+  passed `rep(xvar.names, 3)` — three labels for every bar — which
+  triggered a `'labels' truncated to length ...` warning and could
+  mislabel bars. Labels now correspond one-to-one with the plotted bars.
+- [`plot.boostmtree()`](https://ehrlinger.github.io/hvtiBoostmtree/reference/plot.boostmtree.md)
+  now draws the optimal-iteration reference line for every class of a
+  multiclass (Nominal/Ordinal) prediction object. The internal
+  [`abline()`](https://rdrr.io/r/graphics/abline.html) calls indexed an
+  already-scalar `Mopt` as `Mopt[q]`, yielding `NA` (and a silently
+  missing line) for the second and later classes.
+
 ## hvtiBoostmtree 2.0.0
 
 ### Breaking Changes

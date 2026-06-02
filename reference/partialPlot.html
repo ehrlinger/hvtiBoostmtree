@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">hvtiBoostmtree</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Partial plot analysis</h1>
-      <small class="dont-index">Source: <a href="https://github.com/ehrlinger/hvtiBoostmtree/blob/v2.0.0/R/partialPlot.R" class="external-link"><code>R/partialPlot.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/ehrlinger/hvtiBoostmtree/blob/main/R/partialPlot.R" class="external-link"><code>R/partialPlot.R</code></a></small>
       <div class="d-none name"><code>partialPlot.Rd</code></div>
     </div>
 
@@ -210,17 +210,17 @@ machine, <em>Ann. of Statist.</em>, 5:1189-1232, 2001.</p>
 <span class="r-in"><span><span class="co">#x1 has a linear main effect</span></span></span>
 <span class="r-in"><span><span class="co">#x2 is quadratic with quadratic time trend</span></span></span>
 <span class="r-in"><span><span class="va">pp.obj</span> <span class="op">&lt;-</span> <span class="fu">partialPlot</span><span class="op">(</span>object <span class="op">=</span> <span class="va">boost.grow</span>, xvar.names <span class="op">=</span> <span class="st">"x1"</span>,plot.it <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/Rtmp4oj7Cg/PartialPlot.pdf</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/RtmpvtuxXc/PartialPlot.pdf</span>
 <span class="r-in"><span><span class="va">pp.obj</span> <span class="op">&lt;-</span> <span class="fu">partialPlot</span><span class="op">(</span>object <span class="op">=</span> <span class="va">boost.grow</span>, xvar.names <span class="op">=</span> <span class="st">"x2"</span>,plot.it <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/Rtmp4oj7Cg/PartialPlot.pdf</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/RtmpvtuxXc/PartialPlot.pdf</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">#partial plot using "x2" as the conditional variable</span></span></span>
 <span class="r-in"><span><span class="va">pp.obj</span> <span class="op">&lt;-</span> <span class="fu">partialPlot</span><span class="op">(</span>object <span class="op">=</span> <span class="va">boost.grow</span>, xvar.names <span class="op">=</span> <span class="st">"x1"</span>,</span></span>
 <span class="r-in"><span>                      conditional.xvar <span class="op">=</span> <span class="st">"x2"</span>, conditional.values <span class="op">=</span> <span class="fl">1</span>,plot.it <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/Rtmp4oj7Cg/PartialPlot.pdf</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/RtmpvtuxXc/PartialPlot.pdf</span>
 <span class="r-in"><span><span class="va">pp.obj</span> <span class="op">&lt;-</span> <span class="fu">partialPlot</span><span class="op">(</span>object <span class="op">=</span> <span class="va">boost.grow</span>, xvar.names <span class="op">=</span> <span class="st">"x1"</span>,</span></span>
 <span class="r-in"><span>                      conditional.xvar <span class="op">=</span> <span class="st">"x2"</span>, conditional.values <span class="op">=</span> <span class="fl">2</span>,plot.it <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/Rtmp4oj7Cg/PartialPlot.pdf</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/RtmpvtuxXc/PartialPlot.pdf</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">##------------------------------------------------------------</span></span></span>
 <span class="r-in"><span><span class="co">## Synthetic example (Response is binary)</span></span></span>
@@ -263,9 +263,9 @@ machine, <em>Ann. of Statist.</em>, 5:1189-1232, 2001.</p>
 <span class="r-in"><span><span class="co">#x1 has a linear main effect</span></span></span>
 <span class="r-in"><span><span class="co">#x2 is quadratic with quadratic time trend</span></span></span>
 <span class="r-in"><span><span class="va">pp.obj</span> <span class="op">&lt;-</span> <span class="fu">partialPlot</span><span class="op">(</span>object <span class="op">=</span> <span class="va">boost.grow</span>, xvar.names <span class="op">=</span> <span class="st">"x1"</span>,plot.it <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/Rtmp4oj7Cg/PartialPlot.pdf</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/RtmpvtuxXc/PartialPlot.pdf</span>
 <span class="r-in"><span><span class="va">pp.obj</span> <span class="op">&lt;-</span> <span class="fu">partialPlot</span><span class="op">(</span>object <span class="op">=</span> <span class="va">boost.grow</span>, xvar.names <span class="op">=</span> <span class="st">"x2"</span>,plot.it <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/Rtmp4oj7Cg/PartialPlot.pdf</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/RtmpvtuxXc/PartialPlot.pdf</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># \donttest{</span></span></span>
@@ -765,12 +765,12 @@ machine, <em>Ann. of Statist.</em>, 5:1189-1232, 2001.</p>
 <span class="r-in"><span><span class="co">#partial plot of double-lung group at 5 years</span></span></span>
 <span class="r-in"><span><span class="va">dltx</span> <span class="op">&lt;-</span> <span class="fu">partialPlot</span><span class="op">(</span>object <span class="op">=</span> <span class="va">spr.obj</span>, xvar.names <span class="op">=</span> <span class="st">"AGE"</span>,</span></span>
 <span class="r-in"><span>                    tm.unq <span class="op">=</span> <span class="fl">5</span>, subset<span class="op">=</span><span class="va">spr.obj</span><span class="op">$</span><span class="va">x</span><span class="op">$</span><span class="va">DOUBLE</span><span class="op">==</span><span class="fl">1</span>,plot.it <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/Rtmp4oj7Cg/PartialPlot.pdf</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/RtmpvtuxXc/PartialPlot.pdf</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">#partial plot of single-lung group at 5 years</span></span></span>
 <span class="r-in"><span><span class="va">sltx</span> <span class="op">&lt;-</span> <span class="fu">partialPlot</span><span class="op">(</span>object <span class="op">=</span> <span class="va">spr.obj</span>, xvar.names <span class="op">=</span> <span class="st">"AGE"</span>,</span></span>
 <span class="r-in"><span>                    tm.unq <span class="op">=</span> <span class="fl">5</span>, subset<span class="op">=</span><span class="va">spr.obj</span><span class="op">$</span><span class="va">x</span><span class="op">$</span><span class="va">DOUBLE</span><span class="op">==</span><span class="fl">0</span>,plot.it <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/Rtmp4oj7Cg/PartialPlot.pdf</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Plot saved to: /tmp/RtmpvtuxXc/PartialPlot.pdf</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">#combine the two plots: we use lowess smoothed values</span></span></span>
 <span class="r-in"><span><span class="va">dltx</span> <span class="op">&lt;-</span> <span class="va">dltx</span><span class="op">$</span><span class="va">l.obj</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></span>
