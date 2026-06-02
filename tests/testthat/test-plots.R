@@ -67,6 +67,42 @@ test_that("plot.boostmtree (predict object) writes a PDF without error", {
   expect_length(list.files(tmp, pattern = "\\.pdf$"), 1L)
 })
 
+test_that("plot.boostmtree draws Mopt reference lines for every class (no NA v)", {
+  # Multiclass predict object (n.Q > 1) exercises the per-class err.rate plot
+  # branch where the optimal-iteration reference line is drawn. Regression test
+  # for the scalar-indexed `Mopt[q]` bug, which silently passed v = NA to
+  # abline() for q > 1 (abline(v = NA) draws nothing, no warning).
+  set.seed(1)
+  x  <- data.frame(x1 = rnorm(6), x2 = rep(c(0, 1), times = 3))
+  tm <- rep(c(0, 1), times = 3)
+  id <- rep(1:3, each = 2)
+  y  <- ordered(c(1, 1, 2, 2, 3, 3))
+  fit <- suppressMessages(boostmtree(
+    x = x, tm = tm, id = id, y = y,
+    family = "Ordinal", M = 6, K = 3, nknots = 3, d = 1, nu = 0.15,
+    verbose = FALSE
+  ))
+  pred <- suppressMessages(predict(fit, x = x, tm = tm, id = id,
+                                   y = as.numeric(y)))
+  skip_if(is.null(pred$err.rate) || length(pred$Mopt) < 2,
+          "predict object did not populate the multiclass err.rate branch")
+
+  captured <- new.env(parent = emptyenv())
+  captured$v <- numeric(0)
+  fake_abline <- function(v = NULL, ...) {
+    if (!is.null(v)) captured$v <- c(captured$v, v)
+    invisible(NULL)
+  }
+  tmp <- tempfile(fileext = "")
+  dir.create(tmp)
+  testthat::with_mocked_bindings(
+    suppressMessages(plot(pred, path_saveplot = tmp, Verbose = FALSE)),
+    abline = fake_abline,
+    .package = "hvtiBoostmtree"
+  )
+  expect_false(anyNA(captured$v))
+})
+
 test_that("plot.boostmtree stops on wrong class", {
   expect_error(plot.boostmtree(list()), regexp = "class")
 })
@@ -177,6 +213,23 @@ test_that("vimpPlot writes a PDF and returns invisibly", {
              path_saveplot = tmp, Verbose = FALSE)
   )
   expect_length(list.files(tmp, pattern = "\\.pdf$"), 1L)
+})
+
+test_that("vimpPlot labels one bar per variable (no label-length warning)", {
+  out <- make_binary_fit_plots()
+  pred <- predict(out$fit,
+                  x  = out$sim$dtaL$features,
+                  tm = out$sim$dtaL$time,
+                  id = out$sim$dtaL$id,
+                  y  = out$sim$dtaL$y)
+  v <- vimp.boostmtree(pred, x.names = colnames(out$sim$dtaL$features)[1:2])
+  tmp <- tempfile(fileext = "")
+  dir.create(tmp)
+  expect_no_warning(
+    vimpPlot(v, xvar.names = colnames(out$sim$dtaL$features)[1:2],
+             path_saveplot = tmp, Verbose = FALSE),
+    message = "truncated"
+  )
 })
 
 test_that("vimpPlot stops when vimp is NULL", {

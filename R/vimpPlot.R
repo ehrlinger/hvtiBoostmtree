@@ -208,7 +208,7 @@ vimpPlot <- function(vimp,
         text(
           c(bp),
           pmax(as.matrix(vimp[[1]][, q]), 0) + eps,
-          rep(xvar.names, 3),
+          xvar.names,
           srt = 90,
           adj = 0.0,
           cex = if (!is.null(cex.xlab)) cex.xlab else 1
@@ -248,7 +248,7 @@ vimpPlot <- function(vimp,
         text(
           c(bp1),
           pmax(as.matrix(vimp.x), 0) + eps,
-          rep(xvar.names, 3),
+          xvar.names,
           srt = 90,
           adj = 0.0,
           cex = if (!is.null(cex.xlab)) cex.xlab else 1

@@ -343,7 +343,7 @@ plot.boostmtree <- function(x,
             type = "l",
             lty = 1
           )
-          abline(v = Mopt[q], lty = 2, col = 2, lwd = 2)
+          abline(v = Mopt, lty = 2, col = 2, lwd = 2)
           if (!is.null(x$vimp)) {
             vimp <- x$vimp
             barplot(vimp, las = 2, ylab = y.lab.vimp, cex.names = 1.0)
@@ -366,7 +366,7 @@ plot.boostmtree <- function(x,
               type = "n"
             )
             lines(lowess.mod(1:M, x$boost.obj$rho[, q], f = 5 / 10))
-            abline(v = Mopt[q], lty = 2, col = 2, lwd = 2)
+            abline(v = Mopt, lty = 2, col = 2, lwd = 2)
             plot(
               1:M,
               x$boost.obj$phi[, q],
@@ -386,7 +386,7 @@ plot.boostmtree <- function(x,
               type = "n"
             )
             lines(lowess.mod(1:M, x$boost.obj$lambda[, q], f = 5 / 10))
-            abline(v = Mopt[q], lty = 2, col = 2, lwd = 2)
+            abline(v = Mopt, lty = 2, col = 2, lwd = 2)
           }
         }
       }, finally = {
