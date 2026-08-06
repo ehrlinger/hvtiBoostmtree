@@ -13,7 +13,7 @@
 # added push[main] so it also runs house-standard's check-manual.yaml role.
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   release:
     types: [published]
   workflow_dispatch:
