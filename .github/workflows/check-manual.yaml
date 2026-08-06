@@ -18,7 +18,7 @@ on:
     types: [published]
   workflow_dispatch:
 
-name: check-manual.yaml
+name: Check manual
 
 permissions: read-all
 
