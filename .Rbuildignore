@@ -17,3 +17,4 @@
 ^inst/extdata/fit_af\.rds$
 ^inst/extdata/fit_spi\.rds$
 ^inst/dev$
+^CLAUDE\.md$
