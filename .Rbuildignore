@@ -18,3 +18,4 @@
 ^inst/extdata/fit_spi\.rds$
 ^inst/dev$
 ^CLAUDE\.md$
+^LICENSE\.md$
