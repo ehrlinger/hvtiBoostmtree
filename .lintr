@@ -1,0 +1,24 @@
+# hvtiBoostmtree is an internal fork of kogalur/boostmtree, branched at v1.5.1.
+# Most of R/ is upstream's code in upstream's style, so the two linters below
+# are configured rather than obeyed.
+#
+# object_name_linter -- OFF. It flags 753 names, and they are the public API:
+# M, nu, K, pen.ord and lambda.max are formal arguments of the exported
+# boostmtree(), and marginalPlot/partialPlot/vimpPlot/vimp.boostmtree are
+# exported functions. Renaming them would break every caller. They are also the
+# notation of Pande et al. (2017), which this package implements -- `m` and `k`
+# would sever that correspondence. And a live `upstream` remote points at
+# cran/boostmtree, so reformatting 950 lines would make any future upstream
+# pull unmergeable. The rule exists to keep OUR code consistent; upstream's
+# naming is not ours to normalise.
+#
+# line_length_linter -- 120. Upstream wraps wide (median 89, max 155). 120
+# clears 106 of 111 while still flagging the five genuinely unreadable lines,
+# rather than declaring the problem away with a limit nothing can exceed.
+#
+# Everything else is lintr's default and IS enforced. object_usage_linter
+# especially: with the package installed its findings are trustworthy here.
+linters: linters_with_defaults(
+    object_name_linter = NULL,
+    line_length_linter = line_length_linter(120L)
+  )

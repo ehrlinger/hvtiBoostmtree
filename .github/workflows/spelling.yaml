@@ -3,7 +3,7 @@
 # To add words to the allow-list, add them to inst/WORDLIST (one word per line).
 on:
   push:
-    branches: [main, master, 'docs/**', 'feature/**', 'fix/**', 'release/**']
+    branches: [main]
   pull_request:
 
 name: spelling
