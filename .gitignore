@@ -9,7 +9,8 @@ docs/
 vignettes/*_cache/
 
 # Claude Code workspace
-.claude/
+.claude/*
+!.claude/house-style.md
 
 # Test run artifacts
 tests/testthat/Rplots.pdf
