@@ -12,7 +12,13 @@
 # built the manual. Trimmed to the standard's single ubuntu-release job and
 # added push[main] so it also runs house-standard's check-manual.yaml role.
 on:
+  # A commit that only touches the generated house-style artifact cannot change
+  # the package: .claude is in .Rbuildignore, so it never reaches the build.
+  # Running this on such a commit burns runner minutes and queues ahead of
+  # checks that can actually fail.
   push:
+    paths-ignore:
+      - '.claude/**'
     branches: [main]
   release:
     types: [published]
