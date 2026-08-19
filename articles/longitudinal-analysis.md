@@ -253,7 +253,7 @@ print(fit_af)
 #> optimized number iterations : 49 
 #> optimized rho               : 0.6377 
 #> optimized phi               : 0.2011 
-#> OOB cv RMSE                 : 0.4645
+#> OOB cv RMSE                 : 0.4644
 ```
 
 ``` r
