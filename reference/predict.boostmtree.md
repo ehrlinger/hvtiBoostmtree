@@ -337,11 +337,11 @@ cat("boostmtree (rho=0):", p.3$rmse,"\n")
 
 ##predicted value plots
 plot(p.1)
-#> Plot saved to: /tmp/RtmpMJ2FAo/boostmtree_plot.pdf
+#> Plot saved to: /tmp/RtmpU2L8Hs/boostmtree_plot.pdf
 plot(p.2)
-#> Plot saved to: /tmp/RtmpMJ2FAo/boostmtree_plot.pdf
+#> Plot saved to: /tmp/RtmpU2L8Hs/boostmtree_plot.pdf
 plot(p.3)
-#> Plot saved to: /tmp/RtmpMJ2FAo/boostmtree_plot.pdf
+#> Plot saved to: /tmp/RtmpU2L8Hs/boostmtree_plot.pdf
 
 
 
