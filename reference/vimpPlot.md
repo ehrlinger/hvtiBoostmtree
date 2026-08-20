@@ -260,6 +260,6 @@ vimp.grow <- vimp.boostmtree(object = boost.grow)
 vimpPlot(vimp = vimp.grow, ymaxlim = 20, ymaxtimelim = 20,
          xaxishead = c(3,3), yaxishead = c(65,65),
          cex.xlab = 1, subhead.cexval = 1.2)
-#> Plot saved to: /tmp/RtmpsMp3T7/VIMPplot.pdf
+#> Plot saved to: /tmp/RtmpksAGQ5/VIMPplot.pdf
 # }
 ```
