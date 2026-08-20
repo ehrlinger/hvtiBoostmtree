@@ -19,3 +19,5 @@
 ^inst/dev$
 ^CLAUDE\.md$
 ^LICENSE\.md$
+^AGENTS\.md$
+^\.lintr$
