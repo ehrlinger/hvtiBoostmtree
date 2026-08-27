@@ -11,6 +11,7 @@ vignettes/*_cache/
 # Claude Code workspace
 .claude/*
 !.claude/house-style.md
+.remember/
 
 # Test run artifacts
 tests/testthat/Rplots.pdf
