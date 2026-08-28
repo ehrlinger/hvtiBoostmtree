@@ -65,8 +65,8 @@ Seven workflows, the most in the family:
 - **Roxygen markdown is NOT enabled** — `DESCRIPTION` has no `Roxygen: list(markdown = TRUE)`,
   so use `\code{}`, `\strong{}`, `\emph{}` and `\link{}`. Markdown lands literally in the
   `.Rd`.
-  ⚠️ `hvtiPlotR`, `hvtiRdatasets`, `hvtiRtables`, `hvtiRbootstrap`, `hvtiRpropensity` and
-  `hvtiverse` all *do* enable it. This repo is with `hvtiRutilities` and `hvtiRtemplates` on
+  ⚠️ `hvtiPlotR`, `hvtiRdatabuild`, `hvtiRtables`, `hvtiRbootstrap`, `hvtiRpropensity` and
+  `hvtiR` all *do* enable it. This repo is with `hvtiRutilities` and `hvtiRtemplates` on
   the other side.
 - **`testthat` edition 3.** Test files are `test-*.R` with a hyphen; runner is
   `tests/testthat.R`.
@@ -88,7 +88,7 @@ Seven workflows, the most in the family:
 - **Never push to `main`.** Branch, then open a PR and let the maintainer merge.
 - **`main` is protected by a GitHub ruleset, and nothing in this repo records that.** A clone
   shows no trace of it, so it is stated here. The ruleset is named `protect main`, is
-  identical across all twelve hvtiverse repositories, and enforces four rules on the default
+  identical across the hvtiR family repositories, and enforces four rules on the default
   branch: no deletion, no force-push, pull-request-only, and an **automatic Copilot code
   review** on every PR. A rejected push comes from the server, not a local hook.
   ⚠️ It currently requires **zero approvals**. `require_code_owner_review` is set but inert
