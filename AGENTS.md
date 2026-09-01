@@ -106,11 +106,12 @@ Seven workflows, the most in the family:
   The same applies to `gh pr list`, `gh pr view` and `gh run` in this repo.
 - Versions are **straight three digits** (`2.0.1`). Never a `.9000` suffix or a fourth digit.
 - **Patch-digit bumps only**, as fixes land. Minor and major are the maintainer's decision.
-- **Bump when you name a version, not when you merge.** A pull request lands
-  without touching `Version:`. Its entry goes under a standing
-  `# hvtiBoostmtree (unreleased)` heading in `NEWS.md`, and a separate commit renames that
-  heading, moves `DESCRIPTION` to match and refreshes its `Date`, at most once a day.
-  `.claude/house-style.md` carries the rule and the reasoning.
+- **Bump when you name a version, not when you merge.** A pull request lands without touching
+  `Version:`. Its entry goes under a `# hvtiBoostmtree (unreleased)` heading in `NEWS.md`,
+  which you add when it is not already there. A separate commit then renames that heading to
+  the new version and updates `DESCRIPTION` and its `Date`, at most once a day. The heading is
+  gone again after a bump, so the next change re-adds it. `.claude/house-style.md` carries the
+  rule and the reasoning.
 
 ## Change discipline
 
