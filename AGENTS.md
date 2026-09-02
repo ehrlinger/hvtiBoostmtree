@@ -40,7 +40,7 @@ Seven workflows, the most in the family:
 |----|----|
 | `R-CMD-check.yaml` | `R CMD check` across platforms |
 | `check-manual.yaml` | the PDF manual build |
-| `lint.yaml` | `lintr::lint_package()` |
+| `lint.yaml` | [`lintr::lint_package()`](https://lintr.r-lib.org/reference/lint.html) |
 | `pkgdown.yaml` | the site build |
 | `house-style.yaml` | the composed house style in `.claude/house-style.md` |
 | `spelling.yaml` | spell check against `inst/WORDLIST` — **unique to this repo in the family** |
@@ -138,8 +138,14 @@ Seven workflows, the most in the family:
 - **Patch-digit bumps only**, as fixes land. Minor and major are the
   maintainer’s decision.
 
-- Bump `DESCRIPTION`, refresh its `Date`, and add the matching `NEWS.md`
-  entry in the same commit.
+- **Bump when you name a version, not when you merge.** A pull request
+  lands without touching `Version:`. Its entry goes under a
+  `# hvtiBoostmtree (unreleased)` heading in `NEWS.md`, which you add
+  when it is not already there. A separate commit then renames that
+  heading to the new version and updates `DESCRIPTION` and its `Date`,
+  at most once a day. The heading is gone again after a bump, so the
+  next change re-adds it. `.claude/house-style.md` carries the rule and
+  the reasoning.
 
 ## Change discipline
 

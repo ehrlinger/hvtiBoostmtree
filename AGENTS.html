@@ -77,7 +77,7 @@
 </tr><tr><td><code>check-manual.yaml</code></td>
 <td>the PDF manual build</td>
 </tr><tr><td><code>lint.yaml</code></td>
-<td><code>lintr::lint_package()</code></td>
+<td><code><a href="https://lintr.r-lib.org/reference/lint.html" class="external-link">lintr::lint_package()</a></code></td>
 </tr><tr><td><code>pkgdown.yaml</code></td>
 <td>the site build</td>
 </tr><tr><td><code>house-style.yaml</code></td>
@@ -133,7 +133,7 @@
 </li>
 <li><p>Versions are <strong>straight three digits</strong> (<code>2.0.1</code>). Never a <code>.9000</code> suffix or a fourth digit.</p></li>
 <li><p><strong>Patch-digit bumps only</strong>, as fixes land. Minor and major are the maintainer’s decision.</p></li>
-<li><p>Bump <code>DESCRIPTION</code>, refresh its <code>Date</code>, and add the matching <code>NEWS.md</code> entry in the same commit.</p></li>
+<li><p><strong>Bump when you name a version, not when you merge.</strong> A pull request lands without touching <code>Version:</code>. Its entry goes under a <code># hvtiBoostmtree (unreleased)</code> heading in <code>NEWS.md</code>, which you add when it is not already there. A separate commit then renames that heading to the new version and updates <code>DESCRIPTION</code> and its <code>Date</code>, at most once a day. The heading is gone again after a bump, so the next change re-adds it. <code>.claude/house-style.md</code> carries the rule and the reasoning.</p></li>
 </ul></div>
 <div class="section level2">
 <h2 id="change-discipline">Change discipline<a class="anchor" aria-label="anchor" href="#change-discipline"></a></h2>

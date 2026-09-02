@@ -263,7 +263,7 @@ print(fit_bin)
 #> optimized number iterations : 50 
 #> optimized rho               : 0.2111 
 #> optimized phi               : 0.1084 
-#> OOB cv RMSE                 : 0.3463
+#> OOB cv RMSE                 : 0.3464
 ```
 
 ## References
