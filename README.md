@@ -1,12 +1,51 @@
-# hvtiBoostmtree — Boosted Multivariate Trees for Longitudinal Data
+# hvtiBoostmtree: Boosted Multivariate Trees for Longitudinal Data
+
+> ## 🔴 RETIRED (2026-09-03). Do not use for new work.
+>
+> This package is archived and read-only. It duplicated an upstream package that is
+> actively published on CRAN, and it carries a correctness bug (below).
+>
+> ### Known bug in this package
+>
+> Fitting with `cv.flag = TRUE` leaves the stored terminal-node coefficients
+> (`gamma`) divergent. The in-sample linear predictor and mean are refreshed only
+> in the `else` branch of `if (cv.flag)` (`R/boostmtree.R:1308`), so with
+> cross-validation enabled the working fit stays frozen at its initialization, the
+> ridge penalty collapses, and the linear predictor accumulates unshrunk increments
+> that grow linearly in `M`.
+>
+> Everything that reads the stored `gamma` returns values far outside the observed
+> response range, silently: `predict(use.cv.flag = FALSE)`, `partialPlot()`,
+> `marginalPlot()`, `muhat`, and `vimp()` on the non-cross-validated path.
+> Cross-validated output was not directly corrupted, which is why the bug hid.
+>
+> ⚠️ **If you ran an analysis with this package using `cv.flag = TRUE`, audit it.**
+> Archiving does not un-corrupt finished work.
+>
+> ### What to use instead
+>
+> The bug is present in CRAN `boostmtree` 2.0.0 as well (its
+> `boostmtree_fit_tree.R` is byte-identical to the commit it was diagnosed on), so
+> CRAN is not a safe migration target until upstream ships a fix. Use the patched
+> fork:
+>
+> ```r
+> remotes::install_github("ehrlinger/boostmtree_src",
+>                         subdir = "boostmtree", ref = "v2.0.1-ccf")
+> ```
+>
+> Reported upstream as
+> [kogalur/boostmtree#2](https://github.com/kogalur/boostmtree/issues/2) and
+> [#3](https://github.com/kogalur/boostmtree/pull/3). Once a fixed release reaches
+> CRAN, prefer CRAN.
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/R-CMD-check.yaml)
 [![test coverage](https://codecov.io/gh/ehrlinger/hvtiBoostmtree/graph/badge.svg)](https://app.codecov.io/gh/ehrlinger/hvtiBoostmtree)
 [![pkgdown](https://github.com/ehrlinger/hvtiBoostmtree/actions/workflows/pkgdown.yaml/badge.svg)](https://ehrlinger.github.io/hvtiBoostmtree/)
-[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![Lifecycle: superseded](https://img.shields.io/badge/lifecycle-superseded-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#superseded)
 [![License: GPL (>= 3)](https://img.shields.io/badge/License-GPL%20(%3E%3D%203)-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Repo status: active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Repo status: unsupported](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
 <!-- badges: end -->
 
 > **Fork notice:** `hvtiBoostmtree` is an internal-only fork of
